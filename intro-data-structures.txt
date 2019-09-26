@@ -19,7 +19,7 @@ f) If Patrick wants to leave the line, how would you delete him from the array?
 
 2. Provide another real-world example that you can model using a data structure.
 
-
+Doctor's office categorizing records by patient and year
 
 3. How would your data structure allow developers to access and manipulate the data?
 

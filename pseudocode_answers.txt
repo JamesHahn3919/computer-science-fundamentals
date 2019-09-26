@@ -25,10 +25,11 @@ END IF
 2. Create a function that prints out the numbers from 1 to 100.
 
 INIT total to 1
-WHILE the number is less than 101
-  SET number as total
+WHILE total is less than 101
+  PRINT total
+  SET total equal to total plus one
 END WHILE
-RETURN total
+
 
 3. Create a function that searches for a specific entry in a phonebook.
 
