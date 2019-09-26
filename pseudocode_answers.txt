@@ -34,7 +34,7 @@ END WHILE
 3. Create a function that searches for a specific entry in a phonebook.
 
 INPUT a name
-FOR phonebook length
+FOR every entry in phonebook
   IF name is equal to an entry THEN
   RETURN true
 ELSE
@@ -44,14 +44,19 @@ END FOR
 
 4. Using the pseudocode you wrote for the previous question, implement it in any computer language of your choice.
 
+var entries = ["Shawn Michaels", "Terry Boella", "Bret Hart"]
+
 function entrySearch(entry) {
-    forI(var i=0; i < entries.length; i++) {
+    for(var i=0; i < entries.length; i++) {
         if(entries[i] === entry) {
-            console.log(entry.data);
+            console.log(entry.value);
             return true;
         }
-    }
-    else{
+        else{
         return false
     }
+    }
+    
 }
+
+console.log(entrySearch("Terry Boella"))
