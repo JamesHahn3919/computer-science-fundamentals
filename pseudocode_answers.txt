@@ -46,17 +46,12 @@ END FOR
 
 var entries = ["Shawn Michaels", "Terry Boella", "Bret Hart"]
 
-function entrySearch(entry) {
-    for(var i=0; i < entries.length; i++) {
-        if(entries[i] === entry) {
-            console.log(entry.value);
-            return true;
-        }
-        else{
-        return false
+function entrySearch(arr, entry) {
+  for (var i=0; i < arr.length; i++) {
+    if(arr[i] == entry) {
+      return true;
     }
-    }
-    
+  } return false;
 }
 
-console.log(entrySearch("Terry Boella"))
+entrySearch(entries, "Terry Boella");
