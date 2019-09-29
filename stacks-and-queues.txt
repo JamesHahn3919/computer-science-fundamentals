@@ -33,29 +33,34 @@ reverse('Bloc!');
 
 2. Implement the pop method of a stack using one queue. Make a FIFO data structure mirror the functionality of a LIFO data structure. Since the internal list is not the same as defined in the checkpoint, it may help to rewrite the pseudocode first.
 
-To delete an item, take all of the elements in the queue one at a time and put them at the end of the queue, except for the last one which should be removed and returned.
-
 var queue = ["Medium", "Youtube", "Wikipedia", "Github", "Bloc"]; 
 
-function popQueue(arr) {
-    var queue = [];
-    for (var i = 0; i < arr.length; i++) {
-        queue.push(arr[i]);
-    }
-    var newQueue = [];
-    for (var i = 0; i < ((queue.length) - 1); i++) {
-        newQueue += queue.push();
-    }
-    return newQueue;
+function popQueue() {
+    return queue.splice(queue.length-1, 1) [0];
 }
 
 console.log(popQueue(queue));
 
-function popQueue(arr) {
-    var queue = [];
-    for (var i = 0; i < ((arr.length) - 1); i++) {
-        queue.push(arr[i]);
-    }
-
 3. Implement the enqueue and dequeue methods defined in the checkpoint inside your own Queue class.
 
+
+///enqueue
+
+var queue = ["Medium", "Youtube", "Wikipedia", "Github", "Bloc"]; 
+
+function enqueue(arr) {
+    arr.push("Stack Overflow");
+    return arr;
+}
+
+console.log(enqueue(queue));
+
+///dequeue
+
+var queue = ["Medium", "Youtube", "Wikipedia", "Github", "Bloc"]; 
+
+function dequeue(arr) {
+    return arr.shift();
+}
+
+console.log(dequeue(queue));
