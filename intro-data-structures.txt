@@ -38,8 +38,16 @@ parkLine.splice(1, 4); //f (using Patrick's new index after adding Mary in secti
 
 2. Provide another real-world example that you can model using a data structure.
 
-Doctor's office categorizing records by patient and year 
+Doctor's office records
+Records are organized by patient name, represented as strings
+If a patient has multiple visits, organize by date from earliest to most recent
+When a patient changes doctors, take them out of the records
+If a patient changes doctors, the next patient in alphabetical order will take their place in the queue
+
 
 3. How would your data structure allow developers to access and manipulate the data?
 
-It would allow developers to search by year, or patient name, as well as to search patient name and then filter by year. It would also allow to add new patients, new years of patient records, and edit any incorrect information
+Insert new patients in alphabetical order in list
+Remove former patients from list
+Change patients place in list if they undergo a name change
+Add new visit records with date if a customer is returning
