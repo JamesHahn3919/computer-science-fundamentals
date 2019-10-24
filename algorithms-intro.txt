@@ -1,0 +1,70 @@
+Exercises
+
+1. Using proper pseudo-code, describe the following primitive algorithms:
+  Making coffee;
+
+  Fill reservoir with 18 fl oz of water
+  Place coffee filter in filter basket
+  Add 3 tablespoons of coffee grounds to filter basket (1 tbsp for every 6 fl oz)
+  Turn on coffee maker
+
+  IF reservoirContents > 0  && coffeeFilter = true THEN
+    SET coffeeGrounds to 1
+    FOR every 6 fl oz of water in reservoir
+      INCREMENT coffeeGrounds
+    END FOR
+    RETURN Turn coffee maker on
+  ELSE fill reservoir and replace coffee filter
+  END IF
+
+  Washing dishes;
+
+  Fill sink with hot water
+  Add 1 tbsp dish soap
+  Take dish from stack
+  Wash underwater until clean
+  Rinse off soap with hot water
+
+  SET dishCount to 1
+  WHILE dishStack > 0
+    FOR each dish taken from top of stack
+      CALL washUntilClean
+      CALL rinseHot
+      DECREMENT dishCount 
+    END FOR
+  END WHILE
+
+  A choice of your own.
+  
+  ///The example I've chosen to represent in pseudo-code is the process of grading a multiple choice test
+
+  Take first test from stack
+  Start from question 1
+  For each question on the test, Compare student answer to correct answer from answer sheet
+  If student answer == correct answer, return "Correct!"
+  Else return "Incorrect"
+  End while
+
+  SET testCount to 1
+    FOR each test in stack
+      FOR each question on the test 
+        IF studentAnswer == correctAnswer THEN 
+          RETURN "Correct"
+          ELSE
+          RETURN "Incorrect"
+        END IF
+      END FOR
+    END FOR
+
+2. As with the knot algorithm, there may be more than one way to solve the problem. It is essential to try to pick the best algorithm for a situation. Name three companies who created an algorithm that made them successful, e.g., Google's search algorithm. It doesn't need to be a tech example (such as a recipe or manufacturing a product). Google's algorithm produces more relevant results than other search engines; what about each of your cases make them stand out?
+  
+  1) Youtube's algorithm for determining monetization eligibility. This stands out to me because of how confident you have to be in your code to have a site as big as youtube be essentially moderated by an algorithm, only having humans review videos when a creator is denied by the algorithm and disputes the decision. A second reason this example stands out to me is the complexity and constant updating it would take for a team to write an algorithm capable of being updated to assess current events and determine whether or not it's something an advertiser would be comfortable showing ads on oftentimes even the same day as a news story breaks.
+
+  2) Spotify's reccomendation algorithm that makes their user's daily "For You" playlists stands out to me simply because of how well each playlist fits my musical tastes, sometimes compiling 4 entirely different playlists full of music I used to love and have forgotten about, some of my current favorites, and lots of songs I've never heard of. It almost seems to know exactly what I want to listen to, even if I don't.
+
+  3) Honey's algorithm that searches the internet for coupon codes eligible for usage with products in your current cart while online shopping stands out to me because of how effeciently it searches so many different potential sources for useable coupon codes, and then even compares each new potential subtotal to find the very best deal within seconds.
+
+
+3. Hypothesize about what constitutes an efficient algorithm versus an inefficient algorithm.
+
+Other than the obvious requirement of an efficient algorithm to return a more desirable result than an inefficient one, an effiecient algorithm needs to use as litle resources as possible while still producing the previously mentioned superior result. 
