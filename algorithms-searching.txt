@@ -1,11 +1,59 @@
-Short Answer
-What is a real-life scenario that uses linear search?
-What is a real-life scenario that uses binary search?
-Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using linear search?
-Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using binary search?
-Given an unsorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
-Given a sorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
-Programming Assignment:
-You and a friend have set a wager to see who can find the word "Albatross" in the dictionary the fastest. Write a program to allow you to win the bet.
+Exercises
 
-You work at a pet store, and a child has asked you to net the only white-spotted goldfish from the fish tank. Write a program that will help you net the right fish.
+Short Answer
+
+1. What is a real-life scenario that uses linear search?
+
+  A: Police searching each car at a checkpoint set up to find one particular suspect
+
+2. What is a real-life scenario that uses binary search?
+
+  A:
+
+3. Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using linear search?
+
+  A: 7
+
+4. Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using binary search?
+
+  A: 3
+
+5. Given an unsorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
+
+  A: I'd choose a linear search because binary searches don't work with unsorted collections, so this example requires the usage of a linear search.
+
+6. Given a sorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
+
+  A: I'd choose a binary search because for collections of this size, binary searches are much more efficient. Instead of iterating through the collection one by one, with each iteration of a binary search, half of the results are eliminated, and when there's one million items to search through, this difference in the amount of iterations necessary to find the desired result is very significant.
+
+Programming Assignment:
+
+1. You and a friend have set a wager to see who can find the word "Albatross" in the dictionary the fastest. Write a program to allow you to win the bet.
+
+  A:
+
+    albatrossSearch(arr, target) {
+        let start = 0, end = arr.length-1,  mid = Math.floor((start + end)/2);
+        
+        while (start <= end){
+           if (arr[mid] < target) {
+               start = mid + 1;
+            }
+            else if (arr[mid] > target){
+                end = mid - 1;
+            }
+             mid = Math.floor((end + start)/2);
+          }
+    return (arr[mid] != target) ? -1 : mid;
+    }
+
+2. You work at a pet store, and a child has asked you to net the only white-spotted goldfish from the fish tank. Write a program that will help you net the right fish.
+
+  A: 
+      searchFish(arr, target){
+          for( var i = 0; i < arr.length; i++){
+              if (arr[i] === target){
+                  return "This is the correct fish to net.";
+              }
+          }
+      }
