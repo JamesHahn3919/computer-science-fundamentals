@@ -1,14 +1,28 @@
-What is time complexity and what is its relation to algorithms?
+Exercises
 
-What is runtime?
+1. What is time complexity and what is its relation to algorithms?
 
-How is the runtime of an algorithm calculated?
+A: Time complexity is a function that helps to estimate the time a program will take to execute. It's relation to algorithms is due to it's usefulness in assessing how efficient an algorithm is.
 
-Name the six types of algorithm growth rates we saw in this checkpoint and list them in order of most efficient to least efficient. Now Google another algorithmic growth rate not covered and place it in the correct spot in your list.
+2. What is runtime?
 
-Choose one of the algorithmic growth rates from the last question and make a comparison to a real-life situation.
+A: Runtime is the physical time duration of an algorithm and is frequently used synonymously with time complexity.
 
-Determine the time complexity of the following snippet of code. It is commonly known as a linear search.
+3. How is the runtime of an algorithm calculated?
+
+A: Runtime/time complexity is calculated by adding up how many instruction an algorithm executes as a function of the size of it's input, then simplifying that expression to it's largest term and dropping any constants.
+
+4. Name the six types of algorithm growth rates we saw in this checkpoint and list them in order of most efficient to least efficient. Now Google another algorithmic growth rate not covered and place it in the correct spot in your list.
+  
+  A:
+  a) Constant growth rate, Logarithmic growth rate, linear growth rate, log-linear growth rate, quadratic growth rate, exponential growth rate
+  b) Constant growth rate, Logarithmic growth rate, linear growth rate, log-linear growth rate, quadratic growth rate, cubic growth rate, exponential growth rate
+
+5. Choose one of the algorithmic growth rates from the last question and make a comparison to a real-life situation.
+
+A: The time it takes to get through the customer service line at a store can be represented by a linear growth rate. The customer service employee will have to help each customer in line before getting to you, so if there is 12 customers in front you, the runtime will be much longer than if there is only 4 customers in front of you
+
+6. Determine the time complexity of the following snippet of code. It is commonly known as a linear search.
 
 FUNCTION linearSearch(array, target)
  FOR each number in the array
@@ -18,7 +32,10 @@ FUNCTION linearSearch(array, target)
  END FOR
  RETURN false
 END FUNCTION
-Determine the time complexity of the following snippet of code.
+
+A: O(n) ///Linear growth rate
+
+7. Determine the time complexity of the following snippet of code.
 
 If you get stuck, read through the graphical representation section again.
 
@@ -29,7 +46,10 @@ FUNCTION foo(array)
    END FOR
  END FOR
 END FUNCTION
-Determine the time complexity of the following snippet of code. It is commonly known as the Fibonacci sequence.
+
+A: O(n^2) ///Quadratic growth rate
+
+8. Determine the time complexity of the following snippet of code. It is commonly known as the Fibonacci sequence.
 
 FUNCTION fibonacci(number)
  IF number < 1 THEN
@@ -42,4 +62,9 @@ FUNCTION fibonacci(number)
    RETURN twoBack + oneBack
  END IF
 END FUNCTION
-Out of the code snippets you just saw, which is the most time efficient?
+
+A: O(2^n) ///Exponential growth rate
+
+9. Out of the code snippets you just saw, which is the most time efficient?
+
+A: The linear search example is the most effecient. 
