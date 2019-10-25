@@ -1,7 +1,57 @@
-Define and compare recursion and iteration.
-Name five algorithms that are commonly implemented by recursion.
-When should you use recursion, and when should you avoid recursion? Give examples for each.
-Compare the recursive and iterative solutions to the three algorithms from the checkpoint (factorial, maximum, and fibonacci). What is similar, and what is different?
-Given a multi-dimensional collection (such as an array) where the number of dimensions is unknown, write a recursive algorithm to count the number of items in the entire collection.
-A palindrome is a word or phrase whose spelling is the same either direction (e.g., racecar). Write a recursive algorithm to determine if a given word or phrase is a palindrome.
-Google Easter Egg: Google the term "recursion". Google will prompt you with "Did you mean: recursion". Explain why this behavior exhibits properties of recursion.
+Exercises
+
+1. Define and compare recursion and iteration.
+
+  A: Recursion is repeating the same steps until a task is complete using a procedure that call itself. Iteration is when a set of instructions are repeated in a sequence a specified number of times or until a condition is met. Whenever the first set of instructions is executed again, it is called an iteration. The key differences are that recursive methods call themselves, while iterative ones do not; variables created during recursion are stored using a stack data structure, while iteration doesn't requre a stack; and recursion is slower than recursion 
+
+2. Name five algorithms that are commonly implemented by recursion.
+
+  A: Finding the factorial of a number, greatest common divisor, fibonacci sequences, recursive binary searches, reversing a string
+
+3. When should you use recursion, and when should you avoid recursion? Give examples for each.
+
+  A: You should use recursion when an algorithm can be defined as a combination of sub-results starting with known cases, or when a solution is too complex to solve using iterative code. It should be avoided in most other cases, as it is much slower and more prone to cause system crashes.
+
+4. Compare the recursive and iterative solutions to the three algorithms from the checkpoint (factorial, maximum, and fibonacci). What is similar, and what is different?
+
+  A: 
+    a) both the iterative and recursive factorial functions fail at negative numbers, however the recursive method calls itself in order to complete it's task, while the iterative method uses a process that emulates a "multiply by 'factorial(number-1)" process. 
+
+     b) the recursive maximum function is much less clean than the iterative, and a less efficient runtime, but they both have similar methods of comparing a current maximum/possible maximum variable to the other numbers.
+
+     c) the recursive fibonacci function calls itself in order to add the two previous numbers before it, while the iterative holds the two previous numbers in variables to add them together and return the next number in the sequence.
+
+5. Given a multi-dimensional collection (such as an array) where the number of dimensions is unknown, write a recursive algorithm to count the number of items in the entire collection.
+
+  A: 
+
+     arrayCount = (arr)=>{
+    let count = 0;
+    for (var i=); i <arr.length; i++){
+        if typeof arr[i] === "object"){
+            count += arrayCount(arr[i]);
+          }
+        else {
+            count++;
+        }
+      }
+    return count;
+    }
+
+6. A palindrome is a word or phrase whose spelling is the same either direction (e.g., racecar). Write a recursive algorithm to determine if a given word or phrase is a palindrome.
+
+  A: 
+
+     palindrome = (str) => {
+    if (str.length === 0) {
+        return true;
+    }
+    if (str[0] !== str[str.length-1]) {
+        return false;
+    }
+    return palindrome(str.slice(1, str.length-1));
+    }
+
+7. Google Easter Egg: Google the term "recursion". Google will prompt you with "Did you mean: recursion". Explain why this behavior exhibits properties of recursion.
+
+A: The search exhibits properties of recursion by referencing itself, similarly to how recursive functions call themselves
