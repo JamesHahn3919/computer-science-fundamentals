@@ -1,4 +1,45 @@
-Implement a solution for bubble sort.
-Write pseudocode for quicksort.
-We talked about time complexity in a previous checkpoint, and how to get an idea of the efficiency of an algorithm. After looking at the pseudocode for the above sorting methods, identify why merge sort and quick sort are much more efficient than the others. Walking through each algorithm with a few sample collections may help.
-All of the sorts addressed in this checkpoint are known as comparison sorts. Research bucket sort and explain how it works. What is the ideal input for bucket sort?
+Exercises
+
+1. Implement a solution for bubble sort.
+
+ let bubbleSort = (arr) => {
+     let len = arr.length;
+     let swapped;
+     do {
+         swapped =false;
+         for( let i = 0; i<len; i++) {
+             if (arr[I] >arr[i+1]) {
+                 let tmp = arr[i] ;
+                 arr[i] = arr[i + 1];
+                 arr[i + 1]=tmp;
+                 swapped = true ;
+                 }
+            }
+     } while (swapped) ;
+return arr;
+} ;
+
+2. Write pseudocode for quicksort.
+
+FUNCTION quickSort(arr)
+SET pivotPoint to arr.length
+SET LEFT to empty array
+SET RIGHT to empty array
+FOR i = first index in collection to last index in collection
+IF arr[i] > pivotPoint
+PUSH arr[i] to LEFT
+ELSE
+PUSH arr[i] to RIGHT
+END IF
+END FOR
+CALL quickSort on LEFT
+CALL quickSort on RIGHT
+CONCAT LEFT and RIGHT
+
+3. We talked about time complexity in a previous checkpoint, and how to get an idea of the efficiency of an algorithm. After looking at the pseudocode for the above sorting methods, identify why merge sort and quick sort are much more efficient than the others. Walking through each algorithm with a few sample collections may help.
+
+Merge sort and quicksort are more efficient than the others discussed in this checkpoint because they break larger collections into smaller ones then recombines them once sorted, while the other methods manipulate a singular larger collection, thus losing efficiency.
+
+4. All of the sorts addressed in this checkpoint are known as comparison sorts. Research bucket sort and explain how it works. What is the ideal input for bucket sort?
+
+Bucket sort is a non comparison based sorting algorithm that distributes items into "buckets" which are then sorted individually. Ideal inputs for bucket sorting are ones that are uniformly distributed over a range.
