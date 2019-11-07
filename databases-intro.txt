@@ -1,0 +1,83 @@
+Exercises
+
+1. What data types do each of these values represent?
+
+"A Clockwork Orange"
+
+string
+
+42
+
+integer
+
+09/02/1945
+
+string
+
+98.7
+
+float
+
+$15.99
+
+float
+
+2. Explain when a database would be used. Explain when a text file would be used.
+
+Text files should be used when a document needs to be read by humans, databases should be used for storing larger amounts of data that can be quickly read and modified 
+
+3. Describe one difference between SQL and other programming languages.
+
+SQL is declarative, not procedural. You define what is to be searched, and the database engine decides the method to implement in order to do so
+
+4. In your own words, explain how the pieces of a database system fit together at a high level.
+
+Databases are organized into tables consisting of columns and rows
+
+5. Explain the meaning of table, row, column, and value. Every row contains an entry's data, and each column defines what the data represents.
+
+table: structure holding a data collection 
+row: collection of data on a unit
+column: defines what the data represents
+value: data contained in a given cell of a table
+
+6. List three data types that can be used in a table.
+
+string, float, object
+
+7. Given this payments table, provide an English description of the following queries and include their results:
+
+  a) this query selects the dates with corresponding amounts from the payment column
+  b) this query selects payment where the amount is over $500
+  c) this query selects payments from payent table where the payee is Mega Foods
+
+8. Given this users table, write SQL queries using the following criteria and include the output:
+
+  a) The email and sign-up date for the user named DeAndre Data.
+
+     SELECT email, signup
+     FROM users
+     WHERE name = 'DeAndre Data';
+
+     email                         signup
+     datad@comcast.net,            2008-01-20
+
+  b) The user ID for the user with email 'aleesia.algorithm@uw.edu'.
+
+     SELECT userid
+     FROM users
+     WHERE email = 'aleesia.algorithm@uw.edu';
+
+     userid
+     1
+
+  c) All the columns for the user ID equal to 4.
+
+     SELECT *
+     FROM users
+     WHERE userid = 4;
+
+     userid  name              email               signup
+     4       Brandy Boolean    bboolean@nasa.gov   1999-10-15
+
+
